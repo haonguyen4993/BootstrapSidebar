@@ -1,0 +1,241 @@
+/* [Util] text color */
+.text-red-main {
+  color: #ff7675;
+}
+
+.text-red-secondary {
+  color: #d63031;
+}
+
+/* [Util] background color */
+.bg-gray-main {
+  background-color: #EEEEEE;
+}
+.bg-gray-secondary {
+  background-color: #F5F5F5;
+}
+
+/* [Base] images */
+.img-circle {
+  border-radius: 100%;
+}
+
+/* [Base] Badge */
+.badge-white {
+  background-color: #fff;
+  color: #212529;
+  border: 1px solid #212529;
+  border-radius: 100%;
+  font-size: 0.6rem;
+  font-weight: normal;
+}
+.badge-red {
+  background-color: #ff7675;
+  color: #fff;
+  font-weight: normal;
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+}
+
+/* [Base] Icons */
+.icon-social {
+  border: 1px solid #d63031;
+  color: #d63031;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+/* [Base] Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -999;
+  background-color: #212529;
+}
+.overlay.active {
+  opacity: 0.7;
+  z-index: 99;
+}
+
+/* [Individual] Main header */
+.main-header {
+  border-bottom: 1px solid #dee2e6;
+}
+.main-header .nav-item {
+  padding-left: 1rem;
+}
+
+.main-header .badge-top {
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+}
+.main-header .user-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* [Individual] Main side bar */
+.sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+}
+
+.main-sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  margin-left: -250px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  z-index: 999;
+  border-right: 1px solid #dee2e6;
+}
+
+.main-sidebar .brand {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  height: 65px;
+  position: relative;
+}
+.main-sidebar .brand h3 {
+  line-height: 1;
+}
+.main-sidebar .brand .slogan {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+.main-sidebar .brand-mini {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.main-sidebar .brand-mini .logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 5px;
+}
+
+.main-sidebar .sidebar {
+  padding: 0 0.25rem;
+  height: calc(100vh - 65px);
+  overflow-y: scroll;
+}
+.main-sidebar .sidebar .user-profile {
+  padding: 1.5rem 0rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #dee2e6;
+  position: relative;
+}
+.main-sidebar .sidebar .user-profile .user-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.5rem;
+}
+.main-sidebar .sidebar .user-profile h5 {
+  font-size: 1rem;
+}
+
+.custom-menu-desktop {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.main-sidebar ul li {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.main-sidebar ul li a {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #424242;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: 1px solid #dee2e6;
+}
+.main-sidebar ul li:hover {
+  background: #E0E0E0;
+}
+.main-sidebar ul li:hover a {
+  color: #d63031;
+}
+.main-sidebar ul li.active {
+  background: #EEEEEE;
+}
+.main-sidebar ul li.active a {
+  color: #ff7675;
+}
+.main-sidebar .sidebar .nav-icon {
+  width: 34px;
+  padding-left: 16px;
+}
+
+/* Main sidebar active */
+.main-sidebar.active {
+  margin-left: 0px;
+}
+/* Main sidebar responsive */
+@media (min-width: 992px) {
+  .main-sidebar {
+    position: relative;
+    margin-left: 0px;
+  }
+  .main-sidebar.active {
+    margin-left: -196px;
+  }
+  .main-sidebar.active .user-profile .media {
+    height: 0;
+    opacity: 0;
+  }
+  .main-sidebar.active .brand-mini {
+    opacity: 1;
+  }
+  .overlay.active {
+    opacity: 0;
+    z-index: -999;
+  }
+  .custom-menu-mobile {
+    display: none;
+  }
+}
+
+/* [Individual] Content wrapper */
+.content-wrapper {
+  padding: 1rem;
+  min-height: calc(100vh - 113px);
+}
+
+/* [Individual] Main footer */
+.main-footer {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
